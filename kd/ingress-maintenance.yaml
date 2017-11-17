@@ -1,0 +1,23 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    ingress.kubernetes.io/secure-backends: "true"
+    ingress.kubernetes.io/whitelist-source-range: "62.25.109.196/24"
+    ingress.kubernetes.io/rewrite-target: /htmlstatic
+  name: pttg-sprint-rps-calc
+spec:
+  rules:
+  - host: calc.rps.pttg.homeoffice.gov.uk
+    http:
+      paths:
+      - backend:
+          serviceName: pttg-maintenance
+          servicePort: 443
+        path: /
+  tls:
+  - hosts:
+    - calc.rps.pttg.homeoffice.gov.uk
+    secretName: letsencrypt-tls
