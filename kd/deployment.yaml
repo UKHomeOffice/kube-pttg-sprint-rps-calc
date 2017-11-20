@@ -153,8 +153,8 @@ spec:
                - SETUID
                - SETGID
         env:
-          - name: API_ROOT
-            value: "https://pttg-ip-api.pt-i-{{.ENVIRONMENT}}.svc.cluster.local"
+          - name: PORT
+            value: 8000
           - name: CA_CERTS_PATH
             value: "/data/pttg-sprint-rps-calc-ca.pem"
           - name: IP_API_AUTH
