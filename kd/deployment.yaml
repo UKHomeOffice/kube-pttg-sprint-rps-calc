@@ -154,7 +154,7 @@ spec:
                - SETGID
         env:
           - name: PORT
-            value: 8000
+            value: "8000"
           - name: CA_CERTS_PATH
             value: "/data/pttg-sprint-rps-calc-ca.pem"
           - name: IP_API_AUTH
