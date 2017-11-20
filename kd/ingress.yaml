@@ -19,4 +19,4 @@ spec:
   tls:
   - hosts:
     - calc.rps.{{.DNS_PREFIX}}pttg.homeoffice.gov.uk
-    secretName: letsencrypt-tls
+    secretName: letsencrypt-tls-pttg-sprint-rpc-calc
