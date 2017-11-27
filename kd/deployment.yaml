@@ -169,6 +169,21 @@ spec:
               configMapKeyRef:
                 name: endpoint-config
                 key: PROXY_REDIRECTION_URL
+          - name: SMTP_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: pttg-dev-smtp
+                key: smtp_password
+          - name: SMTP_SERVER
+            valueFrom:
+              secretKeyRef:
+                name: pttg-dev-smtp
+                key: smtp_server
+          - name: SMTP_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: pttg-dev-smtp
+                key: smtp_username
         resources:
           limits:
             cpu: 1000m
