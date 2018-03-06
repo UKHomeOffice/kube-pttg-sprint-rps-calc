@@ -11,7 +11,9 @@ else
 fi
 
 cd kd
-kd --insecure-skip-tls-verify --timeout 5m0s \
-   --file ingress.yaml \
-   --file service.yaml \
-   --file deployment.yaml
+kd --insecure-skip-tls-verify \
+    -f networkPolicy.yaml \
+    -f ingress.yaml \
+    -f deployment.yaml \
+    -f service.yaml
+    
