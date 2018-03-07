@@ -212,5 +212,5 @@ spec:
         secret:
           secretName: keycloak-api-secret
       - name: bundle
-          configMap:
-            name: bundle
+        configMap:
+          name: bundle
