@@ -101,7 +101,7 @@ spec:
         args:
           - --config=/etc/secrets/keycloak-api-secret.yaml
           - --discovery-url=https://sso.digital.homeoffice.gov.uk/auth/realms/{{.KC_REALM}}
-          - --client-id=pttg-rps-{{.ENVIRONMENT}}
+          - --client-id=pttg-rps-tools
           - --listen=127.0.0.1:9000
           - --enable-logging=true
           - --enable-json-logging=true
